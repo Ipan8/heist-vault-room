@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Vault Room — a heist game</title>
+<link rel="icon" href="data:,">
+<style>
+  html, body { margin: 0; padding: 0; background: #0b0d12; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #e8eaf0;
+  }
+  #game {
+    display: block;
+    width: min(1280px, 100vw);
+    height: auto;
+    aspect-ratio: 1280 / 720;
+    background: #0b0d12;
+  }
+  #status {
+    margin: 10px 0 0;
+    max-width: 1280px;
+    padding: 0 16px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #9aa1b5;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<canvas id="game" width="1280" height="720"></canvas>
+<p id="status" aria-live="polite">The Vault Room — press Space or click to start.</p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
